@@ -25,7 +25,7 @@ function App() {
 						<div className="col-xl-8">
 							<h1>JANJ Finance For You <br /> Aprende a invertir</h1>
 							<h2>Existen formas de invertir con bajo riesgo y el mismo margen de ganancia ¿Quieres conocerlas?</h2>
-							<a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true" />
+							<a href="https://www.youtube.com/watch?v=x8nZzuUxjfs" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true" />
 						</div>
 					</div>
 				</div>

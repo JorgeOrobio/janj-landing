@@ -9,6 +9,8 @@ import './../assets/vendor/remixicon/remixicon.css'
 import './../assets/vendor/venobox/venobox.css'
 import './../assets/vendor/owl.carousel/assets/owl.carousel.min.css'
 import './../assets/img/favicon.png'
+import feature from './../assets/img/features.jpg'
+const axios = require('axios')
 
 export default class main extends React.Component{
 	constructor(props){
@@ -28,7 +30,25 @@ export default class main extends React.Component{
 		})
 	}
 	cta=()=>{
-	
+		console.log(this.state)
+		var baseurl = String(process.env.REACT_APP_API_URL)
+		var url = baseurl+'/correos'
+		var json = {
+			correo:this.state.email
+		}
+		var data = JSON.stringify(json)
+		var config = {
+			method: 'post',
+			url: url,
+			headers: { 
+			'Content-Type': 'application/json'
+			},
+			data:data
+		};
+		axios(config)
+		.then(response => {
+			console.log(response)
+		})    		
 	}
 	onChangeContact=(e)=>{
 		console.log(e.target.value)
@@ -38,7 +58,28 @@ export default class main extends React.Component{
 
 	}
 	contact=()=>{
-
+		console.log(this.state)
+		var baseurl = String(process.env.REACT_APP_API_URL)
+		var url = baseurl+'/contactos'
+		var json = {
+			nombre:this.state.nombre,
+			correo:this.state.correo,
+			asunto:this.state.asunto,
+			mensaje:this.state.mensaje,
+		}
+		var data = JSON.stringify(json)
+		var config = {
+			method: 'post',
+			url: url,
+			headers: { 
+			'Content-Type': 'application/json'
+			},
+			data:data
+		};
+		axios(config)
+		.then(response => {
+			console.log(response)
+		})    		
 	}
 	render(){	
 		return(<>
@@ -73,7 +114,9 @@ export default class main extends React.Component{
 										<p>Puedes recibir o <strong>Consultar Información </strong> referente al mercado de divisas, para corroborar predicciones, planificar tus inversiones y desarrollar la habilidad de <strong>Identificar el Riesgo y las Oportunidades </strong> de una inversión.</p>
 									</div>
 								</div>
-								<div className="image col-lg-6 order-1 order-lg-2" style={{backgroundImage: 'url("assets/img/features.jpg")'}} />
+								<div className="image col-lg-6 order-1 order-lg-2">
+									<img  width="150%"src={feature}/>
+								</div>
 							</div>
 						</div>
 					</section>{/* End Features Section */}
@@ -84,6 +127,8 @@ export default class main extends React.Component{
 								<div className="col-lg-7 text-center text-lg-left">
 									<h3>Mantente informado</h3>
 									<p> Recibe actualizaciones constantes de nuestros servicios, ofertas, o temas de interés</p>
+									<p>Escribenos y obten una plaza para una demo gratuita 
+									<a href="mailto:janjweb1@gmail.com?subject=Demo%20Gratuita&body=Con%20este%20correo%20puedo%20obtener%20mi%20demo%20gratuita"> aqui</a></p>
 								</div>
 								<div className="col-lg-3 cta-btn-container text-center">
 									<input name="correo" onChange={(event)=> this.onChange(event)} className="form-control align-middle" placeholder="Correo Electrónico" />
@@ -216,32 +261,24 @@ export default class main extends React.Component{
 									</div>
 								</div>
 								<div className="col-lg-8 mt-5 mt-lg-0">
-									<form action="forms/contact.php" method="post" role="form" className="php-email-form">
-										<div className="form-row">
-											<div className="col-md-6 form-group">
-												<input type="text" name="nombre" onChange={this.onChangeContact} className="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-												<div className="validate" />
-											</div>
-											<div className="col-md-6 form-group">
-												<input type="email" className="form-control" onChange={this.onChangeContact} name="correo" id="email" placeholder="Correo Electrónico" data-rule="email" data-msg="Please enter a valid email" />
-												<div className="validate" />
-											</div>
-										</div>
-										<div className="form-group">
-											<input type="text" className="form-control" onChange={this.onChangeContact} name="asunto" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+									<div className="form-row">
+										<div className="col-md-6 form-group">
+											<input type="text" name="nombre" onChange={this.onChangeContact} className="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
 											<div className="validate" />
 										</div>
-										<div className="form-group">
-											<textarea className="form-control" name="mensaje" onChange={this.onChangeContact} rows={5} data-rule="required" data-msg="Please write something for us" placeholder="Mensaje" defaultValue={""} />
+										<div className="col-md-6 form-group">
+											<input type="email" className="form-control" onChange={this.onChangeContact} name="correo" id="email" placeholder="Correo Electrónico" data-rule="email" data-msg="Please enter a valid email" />
 											<div className="validate" />
 										</div>
-										<div className="mb-3">
-											<div className="loading">Cargando</div>
-											<div className="error-message" />
-											<div className="sent-message">Tu mensaje ha sido enviado. Gracias!</div>
-										</div>
-										<div className="text-center"><button type="submit">Enviar mensaje</button></div>
-									</form>
+									</div>
+									<div className="form-group">
+										<input type="text" className="form-control" onChange={this.onChangeContact} name="asunto" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+										<div className="validate" />
+									</div>
+									<div className="form-group">
+										<textarea className="form-control" name="mensaje" onChange={this.onChangeContact} rows={5} data-rule="required" data-msg="Please write something for us" placeholder="Mensaje" defaultValue={""} />
+									</div>
+									<div className="text-center"><button className="btn btn-primary"type="button" onClick={this.contact}>Enviar mensaje</button></div>
 								</div>
 							</div>
 						</div>
