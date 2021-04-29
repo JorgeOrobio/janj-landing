@@ -1,27 +1,28 @@
 {
   "files": {
     "main.css": "/janj-landing/static/css/main.4243a9a6.chunk.css",
-    "main.js": "/janj-landing/static/js/main.6265f4eb.chunk.js",
-    "main.js.map": "/janj-landing/static/js/main.6265f4eb.chunk.js.map",
-    "runtime-main.js": "/janj-landing/static/js/runtime-main.cdf04edd.js",
-    "runtime-main.js.map": "/janj-landing/static/js/runtime-main.cdf04edd.js.map",
-    "static/js/2.e841f164.chunk.js": "/janj-landing/static/js/2.e841f164.chunk.js",
-    "static/js/2.e841f164.chunk.js.map": "/janj-landing/static/js/2.e841f164.chunk.js.map",
-    "static/js/3.0b7d7d79.chunk.js": "/janj-landing/static/js/3.0b7d7d79.chunk.js",
-    "static/js/3.0b7d7d79.chunk.js.map": "/janj-landing/static/js/3.0b7d7d79.chunk.js.map",
+    "main.js": "/janj-landing/static/js/main.e8845a59.chunk.js",
+    "main.js.map": "/janj-landing/static/js/main.e8845a59.chunk.js.map",
+    "runtime-main.js": "/janj-landing/static/js/runtime-main.cab58f59.js",
+    "runtime-main.js.map": "/janj-landing/static/js/runtime-main.cab58f59.js.map",
+    "static/js/2.8c098deb.chunk.js": "/janj-landing/static/js/2.8c098deb.chunk.js",
+    "static/js/2.8c098deb.chunk.js.map": "/janj-landing/static/js/2.8c098deb.chunk.js.map",
+    "static/js/3.57415edb.chunk.js": "/janj-landing/static/js/3.57415edb.chunk.js",
+    "static/js/3.57415edb.chunk.js.map": "/janj-landing/static/js/3.57415edb.chunk.js.map",
     "index.html": "/janj-landing/index.html",
     "static/css/main.4243a9a6.chunk.css.map": "/janj-landing/static/css/main.4243a9a6.chunk.css.map",
-    "static/js/2.e841f164.chunk.js.LICENSE.txt": "/janj-landing/static/js/2.e841f164.chunk.js.LICENSE.txt",
+    "static/js/2.8c098deb.chunk.js.LICENSE.txt": "/janj-landing/static/js/2.8c098deb.chunk.js.LICENSE.txt",
     "static/media/boxicons.min.css": "/janj-landing/static/media/boxicons.cbd149c5.ttf",
     "static/media/style.css": "/janj-landing/static/media/hero-bg.79a6a34d.jpg",
+    "static/media/features.6d02393b.jpg": "/janj-landing/static/media/features.6d02393b.jpg",
     "static/media/icofont.min.css": "/janj-landing/static/media/icofont.dad3accb.woff",
     "static/media/logo.6ce24c58.svg": "/janj-landing/static/media/logo.6ce24c58.svg",
     "static/media/remixicon.css": "/janj-landing/static/media/remixicon.f2616f59.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.cdf04edd.js",
-    "static/js/2.e841f164.chunk.js",
+    "static/js/runtime-main.cab58f59.js",
+    "static/js/2.8c098deb.chunk.js",
     "static/css/main.4243a9a6.chunk.css",
-    "static/js/main.6265f4eb.chunk.js"
+    "static/js/main.e8845a59.chunk.js"
   ]
 }
