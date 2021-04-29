@@ -18,6 +18,8 @@ export default function footer(){
 					<div className="social-links">
 						<a href="https://www.facebook.com/profile.php?id=100066703532321" className="facebook"><i className="bx bxl-facebook" /></a>
 						<a href="https://www.instagram.com/janj.finance/" className="instagram"><i className="bx bxl-instagram" /></a>
+						<a href="https://www.youtube.com/channel/UCrpgmF4kKCsyYSnoM4mLBBg" className="youtube"><i className="bx bxl-youtube" /></a>
+						<a href="mailto:janjweb1@gmail.com" className="youtube"><i className="bx bxl-google" /></a>
 					</div>
 					<div className="copyright">
 						© Copyright <strong><span>JANJ</span></strong>. All Rights Reserved
